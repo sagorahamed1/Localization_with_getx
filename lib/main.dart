@@ -1,6 +1,7 @@
-import 'package:change_languague/change/locale_string.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import 'locale_string/locale_string.dart';
 
 void main() {
   runApp(const MyApp());
