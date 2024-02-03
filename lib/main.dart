@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       ///--------------------------------add 2 line below for language change-------------------------------->
+      ///------------default language is english use here------------------------->
       translations: LocaleString(),
       locale: Locale("en", "US"),
 
@@ -47,10 +48,14 @@ class HomePage extends StatelessWidget {
           Text("message".tr,style: TextStyle(fontSize: 18,),),
           Text("story".tr),
 
+
+          SizedBox(height: 50,),
           ElevatedButton(onPressed: (){
             // var locale = Locale("hi","IN");
+
+            ///-------------------------build Dialog is widgets of show dialog--------------------------->
             buildDialog(context);
-          }, child: Text("change ln"))
+          }, child: Text("change Language"))
         ],
       ),
     );
@@ -63,7 +68,7 @@ class HomePage extends StatelessWidget {
    ///-----------------this list is for shown on show dialog and language change from there--------------->
    final List locale = [
      {"name": "English", "locale" : Locale("en", "US")},
-     {"name": "Bangla", "locale" : Locale("bn", "BN")}
+     {"name": "বাংলা", "locale" : Locale("bn", "BN")}
    ];
 
 
